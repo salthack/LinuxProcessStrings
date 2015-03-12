@@ -7,7 +7,7 @@ import signal
 import sys
 
 def parsemem(data):
-	#find all strings > length 4 of high-bit characters
+	#find all ASCII strings > length 4 of characters
 	return re.findall("[^\x00-\x1F\x7F-\xFF]{4,}", data)
 
 def explore(processid):
